@@ -9,7 +9,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
 import { Box } from '@mui/material';
 import './Navbar.css';
-
+import { Link } from 'react-router-dom';
 
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -79,18 +79,24 @@ export default function Navbar() {
 
 
           <div>
+            <Link to="/home" className='text-decorator-none'>
             <Typography className="typo" variant="h6" title="Home">
               Cuide Bem de Você
             </Typography>
+            </Link>
           </div>
 
           <Box className="textos">
+          <Link to="/posts" className='text-decorator-none'>
             <Typography variant="h6" className="typo">
               Postagens
             </Typography>
+            </Link>
+            <Link to="/temas" className='text-decorator-none'>
             <Typography variant="h6" className="typo">
               Temas
             </Typography>
+            </Link>
             <Typography variant="h6" className="typo">
               Cadastrar Tema
             </Typography>

@@ -3,7 +3,7 @@ import React, { useState, useEffect, ChangeEvent } from "react";
 import { Link } from "react-router-dom";
 import "./CadastroUsuario.css";
 import { cadastroUsuario } from '../../service/Service';
-import User from '../../model/User';
+import User from '../../Model/User';
 import { useNavigate } from 'react-router-dom';
 
 function CadastroUsuario() {

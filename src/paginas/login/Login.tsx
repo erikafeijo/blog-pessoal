@@ -4,7 +4,7 @@ import React, { ChangeEvent, useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import useLocalStorage from "react-use-localstorage";
 import { login } from "../../service/Service";
-import UserLogin from "../../model/UserLogin";
+import UserLogin from "../../Model/UserLogin";
 import './Login.css'
 
 function Login() {
