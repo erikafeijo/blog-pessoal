@@ -29,10 +29,10 @@ function ListaPostagem() {
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button variant="contained" size='small' style={{ backgroundColor: "#C589E8", color: "white" }}>
+        <Button variant="contained" size='small' style={{ backgroundColor: "#082f46", color: "white" }}>
           Atualizar
         </Button>
-        <Button variant="contained" size='small' style={{ backgroundColor: "#F18F01", color: "white" }}>
+        <Button variant="contained" size='small' style={{ backgroundColor: "#082f46", color: "white" }}>
           Deletar
         </Button>
       </CardActions>

@@ -51,7 +51,7 @@ function Login() {
                 <Grid item xs={6}>
                     <Box paddingX={20}>
                         <form onSubmit={onSubmit}>
-                            <Typography variant="h4" gutterBottom align="center" className="textos1" style={{ color: "#449DD1" }}>
+                            <Typography variant="h4" gutterBottom align="center" className="textos1" style={{ color: "#082f46" }}>
                                 Entrar
                             </Typography>
                             <TextField

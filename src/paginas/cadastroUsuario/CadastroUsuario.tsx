@@ -64,7 +64,7 @@ function CadastroUsuario() {
             <Grid item xs={6} alignItems="center">
                 <Box paddingX={10}>
                     <form onSubmit={onSubmit}>
-                        <Typography variant="h4" gutterBottom align="center" className="textos2" style={{ color: "#449DD1" }}>Cadastro</Typography>
+                        <Typography variant="h4" gutterBottom align="center" className="textos2" style={{ color: "#082f46" }}>Cadastro</Typography>
                         <TextField
                             value={user.nome}
                             onChange={(event: ChangeEvent<HTMLInputElement>) => updateModel(event)}
@@ -105,7 +105,7 @@ function CadastroUsuario() {
                             variant="outlined" />
                         <Box marginTop={2} textAlign="center">
                             <Link to="/login" className="text-decorator-none">
-                                <Button variant="contained" className="btnCancelar" style={{ backgroundColor: "#F18F01", color: "white" }}>
+                                <Button variant="contained" className="btnCancelar" style={{ backgroundColor: "#082f46", color: "white" }}>
                                     Cancelar
                                 </Button>
                             </Link>
