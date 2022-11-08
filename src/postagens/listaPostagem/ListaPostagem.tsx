@@ -16,8 +16,8 @@ function ListaPostagem() {
           alt="Referencia em Web"
           height="300vh"
           width= "20vw"
-          image="https://i.imgur.com/19ZIUzl.png"
-          title="Logo CBDV"
+          image=""
+          title="Logo"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">

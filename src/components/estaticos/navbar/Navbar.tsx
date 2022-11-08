@@ -81,7 +81,7 @@ export default function Navbar() {
           <div>
             <Link to="/home" className='text-decorator-none'>
             <Typography className="typo" variant="h6" title="Home">
-              Cuide Bem de Você
+              Amazonas de Gaia 
             </Typography>
             </Link>
           </div>
