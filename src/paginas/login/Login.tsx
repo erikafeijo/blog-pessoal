@@ -74,7 +74,7 @@ function Login() {
                                 margin="normal"
                                 variant="outlined" />
                             <Box marginTop={2} textAlign="center">
-                                <Button type="submit" variant="contained" style={{ backgroundColor: "#C589E8", color: "white" }}>
+                                <Button type="submit" variant="contained" style={{ backgroundColor: "##082f46", color: "white" }}>
                                     Logar
                                 </Button>
                             </Box>

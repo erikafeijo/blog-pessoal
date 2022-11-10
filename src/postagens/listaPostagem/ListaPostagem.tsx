@@ -24,7 +24,7 @@ function ListaPostagem() {
             Primeiro Post - Amazonas de Gaia
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-          Somos uma consultoria focada em marketing, marketing digital,web,SEO e data
+          Somos uma consultoria focada em UX,UI, Acessibilidade digital, marketing digital,web,SEO e data
           </Typography>
         </CardContent>
       </CardActionArea>
