@@ -25,14 +25,13 @@ function Login() {
             ...userLogin,
             [event.target.name]: event.target.value
         });
-        console.log(userLogin);
     } //atualiza a model com os dados de input do usuário
 
     useEffect(() => {
-        if (token != "") {
+        if (token !== "") {
             navigate("/home")
         }
-    }, [token]) /*Redireciona o usuário para a Home se o token for diferente de vazio, ou seja, se ele existir */
+    }, [navigate, token]) /*Redireciona o usuário para a Home se o token for diferente de vazio, ou seja, se ele existir */
 
     async function onSubmit(event: ChangeEvent<HTMLFormElement>) {
         event.preventDefault();
@@ -47,11 +46,11 @@ function Login() {
 
     return (
         <>
-            <Grid container direction="row" alignItems="center" justifyContent="center">
+            <Grid container direction="row" alignItems="center" justifyContent="center" className="fundo">
                 <Grid item xs={6}>
                     <Box paddingX={20}>
                         <form onSubmit={onSubmit}>
-                            <Typography variant="h4" gutterBottom align="center" className="textos1" style={{ color: "#082f46" }}>
+                            <Typography variant="h4" gutterBottom align="center" className="textos1" style={{ color: "##082f46" }}>
                                 Entrar
                             </Typography>
                             <TextField
@@ -74,7 +73,7 @@ function Login() {
                                 margin="normal"
                                 variant="outlined" />
                             <Box marginTop={2} textAlign="center">
-                                <Button type="submit" variant="contained" style={{ backgroundColor: "##082f46", color: "white" }}>
+                                <Button type="submit" variant="contained" style={{ backgroundColor: "#C589E8", color: "white" }}>
                                     Logar
                                 </Button>
                             </Box>

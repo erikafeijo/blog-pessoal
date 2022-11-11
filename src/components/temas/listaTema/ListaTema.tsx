@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import { Card, CardActions, CardContent, Button, Typography } from '@material-ui/core';
 import './ListaTema.css';
 import { Box } from '@mui/material';
-import Tema from '../../../model/Tema';
+import Tema from '../../../Model/Tema';
 import useLocalStorage from 'react-use-localstorage';
 import { busca } from '../../../service/Service';
 
@@ -58,7 +58,7 @@ function ListaTema() {
                 </Link>
                 <Link to={`/deletarTema/${tema.id}`} className="text-decorator-none">
                   <Box mx={1}>
-                    <Button variant="contained" size='small' style={{ backgroundColor: "#F18F01", color: "white" }} className="btnDeletar">
+                    <Button variant="contained" size='small' style={{ backgroundColor: "#082f46", color: "white" }} className="btnDeletar">
                       deletar
                     </Button>
                   </Box>
