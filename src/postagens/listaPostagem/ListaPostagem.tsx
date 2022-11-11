@@ -1,44 +1,88 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import { Card, CardActions, CardContent, Button, Typography, CardActionArea, CardMedia } from '@material-ui/core';
+import Postagem from '../../../model/Postagem'
+import { busca } from '../../../service/Service'
+import { Card, CardActions, CardContent, Button, Typography } from '@material-ui/core';
 import './ListaPostagem.css';
+import useLocalStorage from 'react-use-localstorage';
+import { useNavigate } from 'react-router-dom'
 import { Box } from '@mui/material';
 
 function ListaPostagem() {
+  const [posts, setPosts] = useState<Postagem[]>([])
+  const [token, setToken] = useLocalStorage('token');
+  let navigate = useNavigate();
+
+  useEffect(() => {
+    if (token == "") {
+      alert("Você precisa estar logado")
+      navigate("/login")
+
+    }
+  }, [token])
+
+  async function getPost() {
+    await busca("/postagens", setPosts, {
+      headers: {
+        'Authorization': token
+      }
+    })
+  }
+
+  useEffect(() => {
+
+    getPost()
+
+  }, [posts.length])
 
   return (
     <>
-      <Box m={2} >
-        <Card variant="outlined">
-        <CardActionArea>
-        <CardMedia
-          component="img"
-          alt="Referencia em Web"
-          height="300vh"
-          width= "20vw"
-          image=""
-          title="Logo"
-        />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
-            Primeiro Post - Amazonas de Gaia
-          </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
-          Somos uma consultoria focada em UX,UI, Acessibilidade digital, marketing digital,web,SEO e data
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-      <CardActions>
-        <Button variant="contained" size='small' style={{ backgroundColor: "#082f46", color: "white" }}>
-          Atualizar
-        </Button>
-        <Button variant="contained" size='small' style={{ backgroundColor: "#082f46", color: "white" }}>
-          Deletar
-        </Button>
-      </CardActions>
-        </Card>
-      </Box>
-    </>)
+      {
+        posts.map(post => (
+          <Box m={2} >
+            <Card variant="outlined">
+              <CardContent>
+                <Typography color="textSecondary" gutterBottom>
+                  Postagens
+                </Typography>
+                <Typography variant="h5" component="h2">
+                  {post.titulo}
+                </Typography>
+                <Typography variant="body2" component="p">
+                  {post.texto}
+                </Typography>
+                <Typography variant="body2" component="p">
+                  Postagem feita em: {new Date(Date.parse(post.data)).toLocaleString()}
+                </Typography>
+                <Typography variant="body2" component="p">
+                  {post.tema?.descricao}
+                </Typography>
+              </CardContent>
+              <CardActions>
+                <Box display="flex" justifyContent="center" mb={1.5}>
+
+                  <Link to={`/formularioPost/${post.id}`} className="text-decorator-none" >
+                    <Box mx={1}>
+                      <Button variant="contained" size='small' className="btnAtualizar" >
+                        atualizar
+                      </Button>
+                    </Box>
+                  </Link>
+                  <Link to={`/deletarPost/${post.id}`} className="text-decorator-none">
+                    <Box mx={1}>
+                      <Button variant="contained" size='small' color="secondary" className="btnDeletar">
+                        deletar
+                      </Button>
+                    </Box>
+                  </Link>
+                </Box>
+              </CardActions>
+            </Card>
+          </Box>
+        ))
+      }
+    </>
+  )
 }
 
 export default ListaPostagem;
