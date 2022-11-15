@@ -2,8 +2,8 @@ import React, { useEffect } from "react";
 import { Button, ButtonBaseActions} from "@material-ui/core"
 import "./Home.css";
 import { Box, Grid, Typography } from "@mui/material";
-import TabPostagem from "../../components/postagens/tabPostagem/TabPostagem";
-import ModalPostagem from "../../components/postagens/modalPost/ModalPost";
+import TabPostagem from "../../postagens/tabPostagem/TabPostagem";
+import ModalPostagem from "../../postagens/modalPost/ModalPost";
 import { useNavigate } from "react-router-dom";
 import useLocalStorage from "react-use-localstorage";
 
@@ -36,7 +36,7 @@ function Home() {
                     </Box>
                 </Grid>
                 <Grid item xs={6} >
-                    <img src="https://imgur.com/19ZIUzl alt="" width="500px" height="500px" />
+                    <img src="https://i.imgur.com/I59NC38.png" alt="" width="500px" height="500px" />
                 </Grid>
                 <Grid xs={12} className="postagens">
                     <TabPostagem />

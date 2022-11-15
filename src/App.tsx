@@ -7,17 +7,20 @@ import CadastroUsuario from './paginas/cadastroUsuario/CadastroUsuario';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ListaTema from './components/temas/listaTema/ListaTema';
-import ListaPostagem from './components/postagens/listaPostagem/ListaPostagem';
-import CadastroPost from './components/postagens/cadastroPost/CadastroPost';
+import ListaPostagem from './postagens/listaPostagem/ListaPostagem';
+import CadastroPost from './postagens/cadastroPost/CadastroPost';
 import CadastroTema from './components/temas/cadastroTema/CadastroTema';
 import DeletarTema from './components/temas/deletarTema/DeletarTema';
-import DeletarPost from './components/postagens/deletarPost/DeletarPost';
+import DeletarPost from './postagens/deletarPost/DeletarPost';
+import { Provider } from 'react-redux';
+import store from './store/tokens/store';
 
 
 
 function App() {
   return (
-    <>
+    <Provider store={store}>
+    
       <Router>
         <Navbar />
         <div style={{minHeight: "100vh"}}>
@@ -39,7 +42,7 @@ function App() {
         </div>
         <Footer />
       </Router>
-    </>
+   </Provider>
   )
 }
 

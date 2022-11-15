@@ -2,10 +2,11 @@ import React, { ChangeEvent, useEffect, useState } from 'react'
 import { Container, Typography, TextField, Button, Select, InputLabel, MenuItem, FormControl, FormHelperText } from "@material-ui/core"
 import './CadastroPost.css';
 import { useNavigate, useParams } from 'react-router-dom';
-import Tema from '../../../Model/Temas';
 import useLocalStorage from 'react-use-localstorage';
-import Postagem from '../../../Model/Postagem';
-import { busca, buscaId, post, put } from '../../../service/Service';
+import Tema from '../../Model/Tema';
+import Postagem from '../../Model/Postagem';
+import { busca, buscaId, post, put } from '../../service/Service';
+
 
 function CadastroPost() {
     let navigate = useNavigate();

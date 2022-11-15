@@ -1,21 +1,21 @@
 .caixa{
-    background-color: #EFF6FB;
+    background-color: #dfd9e0;
 
 }
 
 .titulo{
-    color: #082f46 !important;
+    color: #3d199b !important;
     font-weight: bold !important;
 }
 
 .subtitulo{
-    color: #449DD1 !important;
+    color: #3d199b !important;
     font-weight: bold !important;
 }
 
 .botao{
     border-color: white !important;
-    background-color: #082f46 !important;
+    background-color: #1f075c !important;
     color: white !important
 }
 

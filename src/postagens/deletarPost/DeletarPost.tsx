@@ -3,8 +3,8 @@ import {Typography, Button, Card, CardActions, CardContent } from "@material-ui/
 import './DeletarPost.css';
 import { useNavigate, useParams } from 'react-router-dom';
 import useLocalStorage from 'react-use-localstorage';
-import Postagem from '../../../Model/Postagem';
-import { buscaId, deleteId } from '../../../service/Service';
+import Postagem from '../../Model/Postagem';
+import { buscaId, deleteId } from '../../service/Service';
 import { Box } from '@mui/material';
 
 function DeletarPostagem() {
